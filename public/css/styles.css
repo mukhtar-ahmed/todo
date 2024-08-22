@@ -1,0 +1,51 @@
+
+        body {
+            font-family: 'Lexend Deca';
+            background-color: aqua;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .date-div {
+            background-color: blueviolet;
+            color: white;
+            padding: 8px;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .display-item {
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .display-item ul {
+            padding-left: 0px;
+            list-style-type: none;
+            /* display: relative; */
+        }
+
+        .todo-item {
+            padding-left: 0px;
+            display: flex;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .todo-item p {
+            padding-left: 10px;
+            font-size: 20px;
+        }
+
+        input:checked+p{
+            text-decoration: line-through;
+            color: #000;
+        }

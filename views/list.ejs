@@ -1,0 +1,33 @@
+<%- include("header") -%>
+    <section class="todo">
+        <div class="date-div">
+            <h1>
+                <%= dayName %>
+            </h1>
+        </div>
+        <div class="display-item">
+            <ul>
+                <% for (const item of newListItem) { %>
+                    <form action="/delete" method="post">
+                    <li class="todo-item">
+                        <input type="checkbox" name="checkbox" onchange="this.form.submit()" value="<%= item._id %>" />
+                        <p>
+                            <%= item.name %>
+                        </p>
+                    </li>
+                    <input type="hidden" name="listTitle" value="<%= dayName %>"/>
+                </form>
+                    <% } %>
+            </ul>
+            <form action="/" class="item" method="post" style="display: flex;justify-content: center;" >
+                <input id="newItem" name="newItem" style="border: none;text-align: center;outline: 0;" placeholder="New Item">
+                <button type="submit" name="list" value=<%= dayName %>><i class="fas fa-plus"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <%- include("footer") -%>
+
+
+
